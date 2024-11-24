@@ -1,0 +1,27 @@
+{
+  "name": "prime_led",
+  "version": "1.0.0",
+  "description": "Prime LED website",
+  "main": "index.html",
+  "scripts": {
+    "watch": "sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch",
+    "compile": "sass sass/main.scss css/style.comp.css",
+    "prefix": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress": "sass css/style.prefix.css css/style.css --output-style compressed",
+    "build": "npm-run-all compile prefix compress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "prime_led"
+  },
+  "author": "Rafael Antoniassi Vicechio",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.81.0"
+  }
+}
