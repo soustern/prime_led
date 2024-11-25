@@ -46,6 +46,10 @@
 /* Colors */
 /* Positioning */
 /* Other */
+html {
+  background-color: #141526;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -76,6 +80,7 @@ ol[role=list] {
 body {
   min-height: 100vh;
   line-height: 1.5;
+  margin: 0;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -118,6 +123,76 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+/* Positioning */
+/* Display & Box Model */
+/* Other */
+.btn {
+  /* Positioning */
+  padding: 0.5em 1em;
+  /* Other */
+  background-color: transparent;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: 700;
+}
+@media only screen and (max-width: 75rem) {
+  .btn {
+    padding: 1em 1.5em;
+  }
+}
+.btn-affluent {
+  /* Other */
+  background: linear-gradient(to bottom, var(--color-affluent-400), var(--color-primary-400));
+  color: var(--color-secondary-300);
+  transition: all 0.1s;
+}
+.btn-affluent:hover {
+  /* Other */
+  background: linear-gradient(to bottom, rgb(231.5, 149.1482213439, 0), rgb(252.7424242424, 84.553030303, 33.7575757576));
+}
+.btn-alt-300 {
+  /* Other */
+  border: 0.1rem solid rgba(236, 240, 241, 0.1);
+  color: var(--color-secondary-300);
+  transition: all 0.2s;
+}
+.btn-alt-300:hover {
+  background-color: rgba(223, 230, 233, 0.1);
+}
+.btn-alt-400 {
+  /* Other */
+  border: 0.1rem solid var(--color-secondary-300);
+  color: var(--color-secondary-300);
+  transition: all 0.2s;
+}
+.btn-alt-400:hover {
+  box-shadow: 0px 0px 15px rgba(236, 240, 241, 0.5);
+}
+
+.header {
+  height: 91vh;
+  background-image: linear-gradient(to top, #141526 10%, transparent), url("../../img/hero.webp");
+  background-size: cover;
+  background-position: top;
+  position: inherit;
+}
+.header__blur {
+  position: absolute;
+  height: 91vh;
+  width: 100%;
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .header__blur {
+    /* Other */
+    webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

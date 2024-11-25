@@ -1,0 +1,20 @@
+.header {
+    height: 91vh;
+    background-image: linear-gradient(to top, rgba($color-black, 1) 10%, transparent), url("../../img/hero.webp");
+    background-size: cover;
+    background-position: top;
+    position: inherit;
+    
+    &__blur {
+        position: absolute;
+        height: 91vh;
+        width: 100%;
+
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+            /* Other */
+            webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(10px);
+           
+        }
+    }
+}
