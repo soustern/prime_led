@@ -1,10 +1,12 @@
 @import "abstracts/extends";
 @import "abstracts/functions";
+@import "abstracts/media_query";
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
 @import "base/animations";
 @import "base/base";
+@import "base/reset";
 @import "base/typography";
 
 @import "pages/index.scss";
