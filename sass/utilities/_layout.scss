@@ -1,0 +1,20 @@
+.text-container {
+    /* Display & Box Model */
+    display: flex;
+  
+    /* Positioning */
+    flex-direction: column;
+    align-items: center;
+  
+    /* Other */
+  
+    &__content {
+      /* Display & Box Model */
+      max-width: 65rem;
+  
+      /* Other */
+      -ms-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+    }
+  }

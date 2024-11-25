@@ -1,0 +1,29 @@
+.flex-column {
+    flex-direction: column !important;
+  }
+  
+  .flex-row {
+    flex-direction: row !important;
+  }
+  
+  /* Text */
+  
+  .text-light {
+    font-weight: 100 !important;
+  }
+  
+  .text-bold {
+    font-weight: 700 !important;
+  }
+  
+  .text-black {
+    font-weight: 900 !important;
+  }
+  
+  .l-spacing-300 {
+    line-height: 3.5rem !important;
+  }
+  
+  .align-center {
+    text-align: center !important;
+  }

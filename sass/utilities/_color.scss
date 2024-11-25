@@ -1,0 +1,9 @@
+.color {
+    &-affluent-400 {
+      color: var(--color-affluent-400);
+    }
+  }
+  
+  .faded {
+    opacity: 0.8 !important;
+  }
