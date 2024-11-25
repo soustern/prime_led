@@ -3,9 +3,7 @@
   }
   
   .glow {
-    &-little {
-      -webkit-text-shadow: 0px 0px 25px rgba($color-affluent-400, 1);
-      -moz-text-shadow: 0px 0px 25px rgba($color-affluent-400, 1);
-      text-shadow: 0px 0px 25px rgba($color-affluent-400, 1);
+    &--little {
+      filter: drop-shadow(0px 0px 25px rgba($color-primary-300, .4));
     }
   }

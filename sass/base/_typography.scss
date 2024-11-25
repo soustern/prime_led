@@ -5,4 +5,76 @@ body {
     font-size: var(--font-size-300);
     font-weight: 400;
     line-height: 1.7;
+    color: var(--color-secondary-300);
 }
+
+.primary-text {
+    /* Other */
+    font-size: rem(30);
+    font-weight: 500;
+  
+    @include responsive(phone) {
+        font-size: rem(30);
+    }
+  
+    &__gradient--300 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-affluent-400,
+        $color-primary-400 40%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+  
+  .secondary-text {
+    /* Other */
+    font-size: 3.8rem;
+    font-weight: 200;
+  
+    @include responsive(phone) {
+      font-size: rem(25);
+    }
+  
+    &__affluent {
+      color: var(--color-affluent-400);
+    }
+  
+    &__gradient--300 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-affluent-400,
+        $color-primary-400 40%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+  
+  .tertiary-text {
+    /* Other */
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+  
+    @include responsive(phone) {
+      font-size: 1.5rem;
+    }
+  
+    &__affluent {
+      color: var(--color-affluent-400);
+    }
+  }
+  
+  .paragraph {
+    font-weight: 200;
+    font-size: rem(30);
+    line-height: 1.2;
+
+    &--tiny {
+      font-size: rem(25);
+    }
+  }
