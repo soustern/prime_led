@@ -1,4 +1,14 @@
-
+// Function that receives a pixel value and returns its equivalent in rem
+@function rem($pxval, $base: 16) {
+    @if not unitless($pixelvalue) {
+        $pixelvalue: strip-units($pixelvalue);
+    }
+    @if not unitless($base)
+    {
+        $base: strip-units($base);
+    }
+    @return ($pixelvalue / $base) * 1rem;
+}
 
 // Receives a number with a unit and returns only the number
 @function strip-units($number) {
