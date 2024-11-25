@@ -1,5 +1,5 @@
 // Function that receives a pixel value and returns its equivalent in rem
-@function rem($pxval, $base: 16) {
+@function rem($pixelvalue, $base: 16) {
     @if not unitless($pixelvalue) {
         $pixelvalue: strip-units($pixelvalue);
     }
