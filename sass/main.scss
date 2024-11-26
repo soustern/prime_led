@@ -1,17 +1,27 @@
-@import "abstracts/extends";
+@import "base/reset";
+
 @import "abstracts/functions";
+
+@import "variables/color";
+@import "variables/other";
+@import "variables/spacing";
+@import "variables/typography";
+
+@import "abstracts/extends";
 @import "abstracts/media_query";
 @import "abstracts/mixins";
-@import "abstracts/variables";
 
 @import "base/animations";
 @import "base/base";
-@import "base/reset";
 @import "base/typography";
 
 @import "components/buttons";
+@import "components/slider";
+@import "components/slider-alt";
+@import "components/card";
 
 @import "layout/header";
+@import "layout/main";
 
 @import "pages/index.scss";
 
@@ -20,4 +30,5 @@
 @import "utilities/layout";
 @import "utilities/other";
 @import "utilities/spacing";
-@import "utilities/text";
+@import "utilities/typography";
+

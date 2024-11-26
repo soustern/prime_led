@@ -1,0 +1,31 @@
+// https://www.youtube.com/watch?v=rdqjMN7Q-bk
+
+.slider {
+    display: flex;
+    list-style: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    gap: $default-gap-size * 2;
+    padding: 0 50%;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+
+    li {
+        flex-shrink: 0;
+        scroll-behavior: smooth;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+
+        &:first-child {
+            margin-left: $default-gap-size;
+        }
+        
+        &:last-child {
+            margin-right: $default-gap-size;
+        }
+    }
+}

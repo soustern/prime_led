@@ -1,0 +1,163 @@
+.section-heading-boilerplate {
+    padding: 0 $padding-section;
+    display: flex;
+    flex-direction: column;
+    gap: $default-gap-size;
+}
+
+.main {
+    &__advantages {
+        display: flex;
+        flex-direction: column;
+        gap: $default-gap-size / 2;
+
+        &--heading {
+            padding: 0 $padding-section;            ;
+        }
+
+        &:first-child {
+            span {
+                color: $color-primary-400;
+                font-weight: $font-weight-700;
+            }
+        }
+    }
+
+    &__photos {
+
+        &--heading {
+            @extend .section-heading-boilerplate;
+        }
+    }
+
+    &__combos {
+
+        &--heading {
+            @extend .section-heading-boilerplate;
+        }
+    }
+
+    &__panels {
+        display: flex;
+        flex-direction: column;
+        gap: $default-gap-size;
+
+        &__img-container {
+            border-radius: $default-border-radius;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            margin-top: $default-gap-size;
+            max-width: rem(300);
+            overflow: hidden;
+
+
+            img {
+            }
+        }
+    }
+
+    &__about-us {
+
+        background-image: linear-gradient(to bottom right, rgba($color-primary-400, .95), rgba($color-primary-700, .9)), url(../../img/about-us-background.webp);
+        background-size: cover;
+        background-position: top;
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+        padding: $padding-section * 4 0;
+
+        &--heading {
+            @extend .section-heading-boilerplate;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: $default-gap-size / 2;
+            }
+
+            p {
+                color: $color-secondary-400;
+            }
+        }
+    }
+
+    &__mail {
+        &--heading {
+            @extend .section-heading-boilerplate;
+        }
+    }
+
+    // https://www.youtube.com/watch?v=Vzj3jSUbMtI&t=33s
+    // https://www.youtube.com/watch?v=idoaw75xjhU
+
+    &__questions {
+        display: flex;
+        flex-direction: column;
+        gap: $default-gap-size;
+
+        &--heading {
+            @extend .section-heading-boilerplate;
+        }
+
+        &--body {
+            padding: 0 $padding-section;
+            box-shadow: $default-box-shadow;
+
+
+            details {
+                padding: $padding-cards $padding-cards * 2;
+                background-color: darken($color-black, 2%);
+                border-radius: $default-border-radius;
+                border: $default-border-style;
+                // box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.1) inset;
+                overflow: hidden;
+
+                &::details-content {
+                    block-size: 0;
+                    transition: block-size .3s, content-visibility .5s, ;
+                    transition-behavior: allow-discrete;
+                }
+
+                &[open] {
+                    &::details-content {
+                        block-size: auto;
+                        block-size: calc-size(auto);
+                    }
+
+                    summary::before {
+                        rotate: 90deg;
+                        inset-block-start: -.7rem;
+                    }
+                }
+            }
+
+            summary {
+                font-size: rem(16);
+                font-weight: $font-weight-400;
+                list-style-position: outside;
+                position: relative;
+
+                &::marker {
+                    content: none;
+                }
+
+                &::before {
+                    content: "»";
+                    color: $color-primary-400;
+                    font-size: rem(30);
+                    position: absolute;
+                    inset-inline-start: rem(-20);
+                    inset-block-start: -.8rem;
+                    transition: rotate 0.2s;
+                }
+            }
+
+            p {
+                color: $color-secondary-400;
+                font-size: rem(16);
+                font-weight: $font-weight-300;
+                line-height: 1.2;
+                padding-block: $padding-cards;
+            }
+        }
+    }
+}

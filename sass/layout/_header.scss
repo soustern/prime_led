@@ -1,55 +1,62 @@
 .header {
-    background-image: linear-gradient(to top, rgba($color-black, 1) 10%, rgba($color-black, .4)), url("../../img/hero.webp");
+    background-image: linear-gradient(to top, rgba($color-black, 1) 10%, rgba($color-black, .85)), url("../../img/hero.webp");
     background-position: top;
     background-size: cover;
-    height: 91vh;
-    position: inherit;
 
-    &__blur {
+    &__wrapper {
         display: flex;
         flex-direction: column;
-        height: 91vh;
-        justify-content: space-evenly;
-        padding: var(--padding-section);
-        position: absolute;
-        width: 100vw;
-        z-index: 1;
-        padding-top: rem(170);
+        gap: $default-gap-size;
+        padding: $padding-section;
+        padding-top: $padding-between-section;
 
         @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
             /* Other */
-            webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(10px);
-           
+            webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
         }       
     }
 
     &__first {
         display: flex;
         flex-direction: column;
+        gap: $default-gap-size;
+        
+        h1 {
+            animation: downToUp .4s ease-in;
 
-        span {
-            background-clip: text;
-            color: $color-primary-300;
+            span {
+                color: $color-primary-400;
+            }
         }
+
+        p {
+            animation: downToUp .4s .4s ease-in;
+            animation-fill-mode: backwards;
+        }
+
+        
     }
 
     &__second {
+        animation: fadeIn .4s .8s ease-in;
+        animation-fill-mode: backwards;
         display: flex;
         justify-content: center;
 
         picture {
-            width: rem(170);
+            width: 50%;
+            max-width: rem(200);
         }
     }
 
-    &__third {
-        font-size: rem(20);
+    &__third{
+        animation: downToUp .4s 1.2s ease-in;
+        animation-fill-mode: backwards;
         display: flex;
         justify-content: center;
-
         button {
-            animation: glow 3s infinite;
+            // animation: glow 3s infinite;
         }
     }
 }

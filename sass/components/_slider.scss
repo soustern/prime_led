@@ -1,0 +1,51 @@
+// https://www.youtube.com/watch?v=McPdzhLRzCg
+
+.slider-wrapper {
+    position: relative;
+    max-width: rem(200);
+    margin: 0 auto;
+
+    .slider {
+        aspect-ratio: 16 / 9;
+        border-radius: $default-border-radius;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        
+
+        div {
+            flex: 1 0 100%;
+            scroll-snap-align: center;
+        }
+
+        &::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+    }
+
+    .slider-nav {
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        bottom: 1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+
+        a {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: $color-secondary-300;
+            opacity: 0.75;
+            transition: opacity ease 250ms;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

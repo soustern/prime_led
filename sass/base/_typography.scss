@@ -1,80 +1,101 @@
 body {
-
-    // Add mine default typography
+    // Add my default typography
     font-family: "Roboto", sans-serif;
-    font-size: var(--font-size-300);
-    font-weight: 400;
-    line-height: 1.7;
     color: var(--color-secondary-300);
+    
 }
 
-.primary-text {
-    /* Other */
-    font-size: rem(30);
-    font-weight: 500;
-  
-    @include responsive(phone) {
-        font-size: rem(30);
-    }
-  
-    &__gradient--300 {
-      background-image: linear-gradient(
-        to right bottom,
-        $color-affluent-400,
-        $color-primary-400 40%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
+.h1 {
+  @include responsive(phone)
+  {
+    font-size: $font-size-500; 
+    text-align: center;
   }
-  
-  .secondary-text {
-    /* Other */
-    font-size: 3.8rem;
-    font-weight: 200;
-  
-    @include responsive(phone) {
-      font-size: rem(25);
-    }
-  
-    &__affluent {
-      color: var(--color-affluent-400);
-    }
-  
-    &__gradient--300 {
-      background-image: linear-gradient(
-        to right bottom,
-        $color-affluent-400,
-        $color-primary-400 40%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-  }
-  
-  .tertiary-text {
-    /* Other */
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.2;
-  
-    @include responsive(phone) {
-      font-size: 1.5rem;
-    }
-  
-    &__affluent {
-      color: var(--color-affluent-400);
-    }
-  }
-  
-  .paragraph {
-    font-weight: 200;
-    font-size: rem(30);
-    line-height: 1.2;
 
-    &--tiny {
-      font-size: rem(25);
-    }
+  @include responsive(tab-port)
+  {
+    font-size: $font-size-500; 
   }
+
+  @include responsive(tab-land)
+  {
+    font-size: $font-size-500; 
+  }
+
+  @include responsive(big-desktop)
+  {
+    font-size: $font-size-500; 
+  }
+}
+
+.h2 {
+  font-weight: $font-weight-400;
+  @include responsive(phone)
+  {
+    font-size: $font-size-400; 
+    text-align: center;
+  }
+
+  @include responsive(tab-port)
+  {
+    font-size: $font-size-400; 
+  }
+
+  @include responsive(tab-land)
+  {
+    font-size: $font-size-400; 
+  }
+
+  @include responsive(big-desktop)
+  {
+    font-size: $font-size-400; 
+  }
+}
+
+.p {
+  font-weight: 200;
+  line-height: 1;
+  color: $color-secondary-400;
+  
+  @include responsive(phone)
+  {
+    font-size: $font-size-300; 
+    text-align: center;
+  }
+
+  @include responsive(tab-port)
+  {
+  }
+
+  @include responsive(tab-land)
+  {
+  }
+
+  @include responsive(big-desktop)
+  {
+  }
+}
+
+.btn-text {
+  font-weight: $font-weight-700;
+  color: inherit;
+  text-align: center;
+
+  @include responsive(phone)
+  {
+    font-size: $font-size-200;
+  }
+
+  @include responsive(tab-port)
+  {
+  }
+
+  @include responsive(tab-land)
+  {
+  }
+
+  @include responsive(big-desktop)
+  {
+  }
+}
+

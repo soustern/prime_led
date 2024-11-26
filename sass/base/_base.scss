@@ -18,3 +18,13 @@ html {
     }
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: $padding-between-section;
+}
+
+:root {
+    interpolate-size: allow-keywords;
+}
+
