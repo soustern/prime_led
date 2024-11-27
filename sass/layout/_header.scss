@@ -6,6 +6,7 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: $default-gap-size;
         padding: $padding-section;
         padding-top: $padding-between-section;
@@ -21,6 +22,7 @@
         display: flex;
         flex-direction: column;
         gap: $default-gap-size;
+        max-width: $max-text-width;
         
         h1 {
             animation: downToUp .4s ease-in;
@@ -45,7 +47,7 @@
         justify-content: center;
 
         picture {
-            width: 50%;
+            min-width: 50%;
             max-width: rem(200);
         }
     }

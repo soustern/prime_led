@@ -2,8 +2,16 @@
     padding: 0 $padding-section;
     display: flex;
     flex-direction: column;
+    max-width: $max-text-width;
     gap: $default-gap-size;
 }
+
+.section-boilerplate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .main {
     &__advantages {
@@ -24,23 +32,57 @@
     }
 
     &__photos {
+        @extend .section-boilerplate;
 
         &--heading {
             @extend .section-heading-boilerplate;
         }
     }
 
-    &__combos {
+    &__combos { 
+        @extend .section-boilerplate;
+
+        gap: $default-gap-size;
 
         &--heading {
             @extend .section-heading-boilerplate;
+        }
+
+        &--grid {
+            margin: 0 $padding-section;
+            display: grid;
+            grid-template-columns:  1fr 1fr;
+            gap: $default-gap-size;
+
+            div {
+                padding: $padding-cards $padding-cards * 2;
+                background-color: darken($color-black, 1.5%);
+                border-radius: $default-border-radius;
+                display: flex;
+                flex-direction: column;
+                gap: $default-gap-size / 3;
+
+                h3 {
+                    span {
+                        color: $color-primary-400;
+                    }
+                }
+                p {
+                    text-align: start;
+                    span {
+                        font-weight: $font-weight-400;
+                    }
+                }
+            }
         }
     }
 
     &__panels {
-        display: flex;
-        flex-direction: column;
-        gap: $default-gap-size;
+        margin: 0 auto;
+
+        &--heading {
+            @extend .section-heading-boilerplate;
+        }
 
         &__img-container {
             border-radius: $default-border-radius;
@@ -50,10 +92,6 @@
             margin-top: $default-gap-size;
             max-width: rem(300);
             overflow: hidden;
-
-
-            img {
-            }
         }
     }
 
@@ -64,6 +102,9 @@
         background-position: top;
         clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
         padding: $padding-section * 4 0;
+        gap: $default-gap-size;
+        @extend .section-boilerplate;
+
 
         &--heading {
             @extend .section-heading-boilerplate;
@@ -76,11 +117,24 @@
 
             p {
                 color: $color-secondary-400;
+                max-width: rem(600);
+            }
+        }
+
+        &--video-container {
+            @extend .section-heading-boilerplate;
+            overflow: hidden;
+            border-radius: $default-border-radius;
+            max-width: rem(600);
+
+            video {
+                width: 100%;
             }
         }
     }
 
     &__mail {
+        @extend .section-boilerplate;
         &--heading {
             @extend .section-heading-boilerplate;
         }
@@ -95,32 +149,34 @@
         gap: $default-gap-size;
 
         &--heading {
+            margin: 0 auto;
             @extend .section-heading-boilerplate;
         }
 
         &--body {
             padding: 0 $padding-section;
             box-shadow: $default-box-shadow;
-
+            max-width: rem(600);
 
             details {
+                // width: rem(600);
                 padding: $padding-cards $padding-cards * 2;
-                background-color: darken($color-black, 2%);
+                background-color: darken($color-black, 1.5%);
                 border-radius: $default-border-radius;
-                border: $default-border-style;
-                // box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.1) inset;
                 overflow: hidden;
 
                 &::details-content {
                     block-size: 0;
-                    transition: block-size .3s, content-visibility .5s, ;
+                    transition: block-size .3s, content-visibility .5s, opacity .3s;
                     transition-behavior: allow-discrete;
+                    opacity: 0;
                 }
 
                 &[open] {
                     &::details-content {
                         block-size: auto;
                         block-size: calc-size(auto);
+                        opacity: 1;
                     }
 
                     summary::before {
@@ -148,6 +204,10 @@
                     inset-inline-start: rem(-20);
                     inset-block-start: -.8rem;
                     transition: rotate 0.2s;
+                }
+
+                &:hover {
+                    cursor: pointer;
                 }
             }
 
