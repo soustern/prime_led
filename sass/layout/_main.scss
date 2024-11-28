@@ -36,7 +36,7 @@
     }
 
     &__photos {
-        background-image: linear-gradient(to bottom right, rgba($color-primary-400, .98), rgba($color-primary-700, .98)), url(../../img/photos-1.webp);
+        background-image: linear-gradient(to bottom right, rgba($color-primary-400, .98), rgba($color-primary-700, .92)), url(../../img/photos-5.webp);
         background-size: cover;
         background-position: center;
         clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
@@ -302,7 +302,10 @@
         form {
             .form-group {
                 textarea {
-                    background-color: red;
+                    max-width: rem(600);
+                    border: none;
+                    padding: $padding-cards;
+                    background-color: darken($color-black, 1.5%);
                 }
 
                 label {

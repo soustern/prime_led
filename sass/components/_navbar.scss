@@ -1,0 +1,28 @@
+.navbar {
+    position: fixed;
+    z-index: 1;
+    padding: $padding-section / 6  $padding-section / 2;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    div {
+        padding: $padding-cards * 1.5 / 2 $padding-cards;
+        border-radius: $default-border-radius * 2;
+        width: 95%;
+        background-color: rgba($color-secondary-400, .03);
+
+        display: flex;
+        justify-content: center;
+
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+            /* Other */
+            webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+        }  
+
+        img {
+            max-width: rem(80);
+        }
+    }
+}

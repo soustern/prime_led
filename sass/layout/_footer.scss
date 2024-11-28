@@ -1,0 +1,79 @@
+.footer {
+    background-image: linear-gradient(to bottom right, rgba($color-primary-400, .98), rgba($color-primary-700, .92));
+    padding: $padding-section;
+
+    display: flex;
+    flex-direction: column;
+    gap: $default-gap-size * 2;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: $default-gap-size;
+        margin: auto;
+    }
+
+    &__heading {
+        p {
+            font-size: rem(10.5);
+            text-transform: uppercase;
+        }
+    }
+
+    .line-break {
+        background-color: $color-secondary-400;
+        opacity: .25;
+        height: rem(1);
+        border-radius: $default-border-radius;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: $default-gap-size;
+        justify-content: center;
+
+        &--socials {
+            display: flex;
+            gap: $default-gap-size;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            button {
+                border: 1px solid rgba($color-secondary-300, 1);
+                i {
+                    color: $color-secondary-400;
+                }
+            }
+        }
+        &--phone {
+            display: flex;
+            gap: $default-gap-size;
+            flex-wrap: wrap;
+
+            p {
+                display: flex;
+                gap: $default-gap-size / 3;
+                align-items: center;
+
+                i {
+                    color: $color-black;
+                }
+            }
+        }
+        &--address {
+            p {
+                display: flex;
+                gap: $default-gap-size / 3;
+                align-items: center;
+
+                i {
+                    transform: translateY(-2px);
+                    color: $color-black;
+                }
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
