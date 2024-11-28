@@ -446,7 +446,7 @@ body {
 }
 
 .header {
-  background-image: linear-gradient(to top, #141526 10%, rgba(20, 21, 38, 0.85)), url("./../img/hero.webp");
+  background-image: linear-gradient(to top, #141526 10%, rgba(20, 21, 38, 0.85)), url("./img/hero.webp");
   background-position: top;
   background-size: cover;
 }
@@ -555,7 +555,7 @@ body {
   margin: auto;
 }
 .main__photos {
-  background-image: linear-gradient(to bottom right, rgba(253, 104, 59, 0.98), rgba(254, 68, 73, 0.92)), url(./../img/photos-5.webp);
+  background-image: linear-gradient(to bottom right, rgba(253, 104, 59, 0.98), rgba(254, 68, 73, 0.92)), url(./img/photos-5.webp);
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
@@ -758,7 +758,7 @@ body {
   overflow: hidden;
 }
 .main__about-us {
-  background-image: linear-gradient(to bottom right, rgba(253, 104, 59, 0.98), rgba(254, 68, 73, 0.92)), url(./../img/about-us-background.webp);
+  background-image: linear-gradient(to bottom right, rgba(253, 104, 59, 0.98), rgba(254, 68, 73, 0.92)), url(./img/about-us-background.webp);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
