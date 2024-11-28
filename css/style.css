@@ -783,11 +783,32 @@ body {
 .main__about-us--video-container video {
   width: 100%;
 }
+.main__mail--heading {
+  margin-bottom: 0.625rem;
+}
+.main__mail form .form-group input {
+  max-width: 37.5rem;
+  border: none;
+  padding: 1.0625rem;
+  background-color: rgb(17.3620689655, 18.2301724138, 32.9879310345);
+  margin-top: 0.625rem;
+  border-radius: 8px;
+  color: #dfe6e9;
+}
 .main__mail form .form-group textarea {
   max-width: 37.5rem;
   border: none;
   padding: 1.0625rem;
   background-color: rgb(17.3620689655, 18.2301724138, 32.9879310345);
+  margin-top: 0.625rem;
+  border-radius: 8px;
+  color: #dfe6e9;
+}
+.main__mail form a button {
+  color: #dfe6e9;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .main__questions {
   display: flex;

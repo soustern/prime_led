@@ -297,22 +297,41 @@
         @extend .section-boilerplate;
         &--heading {
             @extend .section-heading-boilerplate;
+            margin-bottom: $default-gap-size / 2;
+
         }
 
         form {
             .form-group {
+         
+                input {
+                    max-width: rem(600);
+                    border: none;
+                    padding: $padding-cards;
+                    background-color: darken($color-black, 1.5%);
+                    margin-top: $default-gap-size / 2;
+                    border-radius: $default-border-radius;
+                    color: $color-secondary-400;
+
+                }
+
                 textarea {
                     max-width: rem(600);
                     border: none;
                     padding: $padding-cards;
                     background-color: darken($color-black, 1.5%);
+                    margin-top: $default-gap-size / 2;
+                    border-radius: $default-border-radius;
+                    color: $color-secondary-400;
                 }
+            }
 
-                label {
-
-                }
-                input {
-
+            a {
+                button {
+                    color: $color-secondary-400;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
                 }
             }
         }
