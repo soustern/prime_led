@@ -29,20 +29,163 @@
                 font-weight: $font-weight-700;
             }
         }
+
+        a {
+            margin: auto
+        }
     }
 
     &__photos {
-        @extend .section-boilerplate;
+        background-image: linear-gradient(to bottom right, rgba($color-primary-400, .98), rgba($color-primary-700, .95)), url(../../img/photos-1.webp);
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+        padding: $padding-section * 4 $padding-section;
+        padding-bottom: rem(40);
+
+        &--container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;   
+            max-width: rem(600);
+            margin: auto;
+
+            @include responsive(tab-port) {
+                // background-color: red;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-column-gap: 20px;
+                grid-row-gap: 20px;   
+                max-width: rem(600);
+                margin: auto;
+            }
+        }
+
+        &--photo-1 {
+            max-width: rem(150);
+            overflow: hidden;
+            border-radius: $default-border-radius;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+            margin: auto;
+            grid-area: 2 / 1 / 3 / 2;            
+            @include responsive(tab-port) {
+                max-width: rem(150);
+                overflow: hidden;
+                border-radius: $default-border-radius;
+                box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+                margin: auto;
+                grid-area: 1 / 1 / 2 / 2;  
+            } 
+        }
+        &--photo-2 {
+            max-width: rem(150);
+            overflow: hidden;
+            border-radius: $default-border-radius;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+            margin: auto;
+            grid-area: 2 / 2 / 3 / 3;            
+            @include responsive(tab-port) {
+                max-width: rem(150);
+                overflow: hidden;
+                border-radius: $default-border-radius;
+                box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+                margin: auto;
+                grid-area: 2 / 1 / 3 / 2;
+            } 
+        }
+        &--photo-3 {
+            max-width: rem(150);
+            overflow: hidden;
+            border-radius: $default-border-radius;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+            margin: auto;
+            grid-area: 3 / 1 / 4 / 2;            
+            @include responsive(tab-port) {
+                max-width: rem(150);
+                overflow: hidden;
+                border-radius: $default-border-radius;
+                box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+                margin: auto;
+                grid-area: 2 / 2 / 3 / 3; 
+            }  
+        }
+        &--photo-4 {
+            max-width: rem(150);
+            overflow: hidden;
+            border-radius: $default-border-radius;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+            margin: auto;
+            grid-area: 3 / 2 / 4 / 3;             
+            @include responsive(tab-port) {
+                max-width: rem(150);
+                overflow: hidden;
+                border-radius: $default-border-radius;
+                box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+                margin: auto;
+                grid-area: 2 / 3 / 3 / 4;   
+            } 
+        }
+        &--photo-5 {
+            display: none;
+            @include responsive(tab-port) {
+                display: block;
+                max-width: rem(150);
+                overflow: hidden;
+                border-radius: $default-border-radius;
+                box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+                margin: auto;
+                grid-area: 2 / 4 / 3 / 5;       
+            } 
+        }
 
         &--heading {
             @extend .section-heading-boilerplate;
+            grid-area: 1 / 1 / 2 / 3;            
+            justify-content: center;
+            padding: 0;
+
+            @include responsive(tab-port) {
+                grid-area: 1 / 2 / 2 / 5;               
+            } 
+
+            h2, p {
+                text-align: start ;
+            }
+
+            @media only screen and (max-width: rem(357)) {
+                h2 {
+                    font-size: $font-size-400;
+                }    
+            }
         }
+
+        &--button {
+            grid-area: 4 / 1 / 5 / 3;
+            @include responsive(tab-port) {
+                grid-area: 3 / 1 / 4 / 5;    
+            } 
+             
+            a {
+                button {
+                    width: 100%;
+                    justify-content: center;
+                    i {
+                        color: $color-secondary-400;
+                    }
+                }
+            }
+        }
+
     }
 
     &__combos { 
         @extend .section-boilerplate;
 
         gap: $default-gap-size;
+        padding: 0 $padding-section;
 
         &--heading {
             @extend .section-heading-boilerplate;
@@ -53,6 +196,12 @@
             display: grid;
             grid-template-columns:  1fr 1fr;
             gap: $default-gap-size;
+            width: 100%;
+            max-width: rem(600);
+
+            @include responsive(phone) {
+                grid-template-columns: 1fr;
+            }
 
             div {
                 padding: $padding-cards $padding-cards * 2;
@@ -60,7 +209,12 @@
                 border-radius: $default-border-radius;
                 display: flex;
                 flex-direction: column;
-                gap: $default-gap-size / 3;
+                gap: $default-gap-size / 1.8;
+
+                button {
+                    width: 100%;
+                    justify-content: space-between;
+                }
 
                 h3 {
                     span {
@@ -78,10 +232,14 @@
     }
 
     &__panels {
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: $default-gap-size;
+        
 
         &--heading {
             @extend .section-heading-boilerplate;
+            margin: auto;
         }
 
         &__img-container {
@@ -90,14 +248,14 @@
             justify-content: center;
             margin: auto;
             margin-top: $default-gap-size;
-            max-width: rem(300);
+            max-width: rem(600);
             overflow: hidden;
         }
     }
 
     &__about-us {
 
-        background-image: linear-gradient(to bottom right, rgba($color-primary-400, .95), rgba($color-primary-700, .9)), url(../../img/about-us-background.webp);
+        background-image: linear-gradient(to bottom right, rgba($color-primary-400, .98), rgba($color-primary-700, .92)), url(../../img/about-us-background.webp);
         background-size: cover;
         background-position: top;
         clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
@@ -118,6 +276,7 @@
             p {
                 color: $color-secondary-400;
                 max-width: rem(600);
+                text-align: start;
             }
         }
 
@@ -156,14 +315,15 @@
         &--body {
             padding: 0 $padding-section;
             box-shadow: $default-box-shadow;
-            max-width: rem(600);
+            // max-width: rem(600);
 
             details {
-                // width: rem(600);
                 padding: $padding-cards $padding-cards * 2;
                 background-color: darken($color-black, 1.5%);
                 border-radius: $default-border-radius;
                 overflow: hidden;
+                max-width: rem(600);
+                margin: auto;
 
                 &::details-content {
                     block-size: 0;
@@ -192,6 +352,8 @@
                 list-style-position: outside;
                 position: relative;
 
+                transition: padding .2s;
+
                 &::marker {
                     content: none;
                 }
@@ -203,11 +365,17 @@
                     position: absolute;
                     inset-inline-start: rem(-20);
                     inset-block-start: -.8rem;
-                    transition: rotate 0.2s;
+                    transition: rotate .2s, padding .2s;
                 }
 
                 &:hover {
                     cursor: pointer;
+                    
+                    padding-left: rem(10);
+
+                    // &::before {
+                    //     padding-left: rem(10);
+                    // }
                 }
             }
 

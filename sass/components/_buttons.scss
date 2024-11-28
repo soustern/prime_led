@@ -2,16 +2,46 @@
     border-radius: $default-border-radius;
     border: none;
     padding: 1em;
-    text-decoration: none;
     cursor: pointer;
+    display: flex;
+    gap: $default-gap-size / 3;
+    text-decoration: none;
 
     &--gradient{
         background-image: linear-gradient(60deg, $color-primary-300, $color-primary-700);
-        transition: all 2s;
+        transition: background-image 2s;
         
         &:hover {
-            background-image: linear-gradient(60deg, darken($color-primary-300, 5%), darken($color-primary-700, 5%));
+            background-image: linear-gradient(60deg, darken($color-primary-300, 3%), darken($color-primary-700, 3%));
+
+            i {
+                transform: scale(1.17);
+            }
         }
     }
 
+    &--border-style{
+        // background-image: linear-gradient(60deg, $color-primary-300, $color-primary-700);
+        transition: background-image 2s;
+        background-color: transparent;
+        border: $default-border-style;
+        
+        &:hover {
+            // background-image: linear-gradient(60deg, darken($color-primary-300, 3%), darken($color-primary-700, 3%));
+            gap: $default-gap-size / 2;
+            background-color: rgba($color-secondary-300, $alpha: .08);
+
+            i {
+                transform: scale(1.17);
+            }
+        }
+
+        i {
+            color: $color-primary-300;
+        }
+    }
+
+    i {
+        transition: all .2s;
+    }
 }

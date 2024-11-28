@@ -15,7 +15,13 @@
             /* Other */
             webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
-        }       
+        }  
+        
+        @include responsive(tab-port) {
+            flex-direction: row;
+            justify-content: center;
+            height: 70vh;
+        }
     }
 
     &__first {
@@ -26,18 +32,34 @@
         
         h1 {
             animation: downToUp .4s ease-in;
+            max-width: rem(450);
 
             span {
                 color: $color-primary-400;
+            }
+
+            @include responsive(tab-port) {
+                text-align: start;
             }
         }
 
         p {
             animation: downToUp .4s .4s ease-in;
             animation-fill-mode: backwards;
+            max-width: rem(450);
+
+            @include responsive(tab-port) {
+
+                text-align: start;
+            }
         }
 
-        
+        a {
+            display: none;
+            @include responsive(tab-port) {
+                display: block;
+            }
+        }
     }
 
     &__second {
@@ -48,7 +70,7 @@
 
         picture {
             min-width: 50%;
-            max-width: rem(200);
+            max-width: rem(180);
         }
     }
 
@@ -59,6 +81,10 @@
         justify-content: center;
         button {
             // animation: glow 3s infinite;
+        }
+
+        @include responsive(tab-port) {
+            display: none;
         }
     }
 }

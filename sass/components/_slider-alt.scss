@@ -10,6 +10,11 @@
     padding: 0 50%;
     -webkit-overflow-scrolling: touch;
 
+    @include responsive(tab-port) {
+        // padding: 0;
+        justify-content: center;
+    }
+
     &::-webkit-scrollbar {
         display: none; /* Safari and Chrome */
     }
