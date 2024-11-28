@@ -36,7 +36,7 @@
     }
 
     &__photos {
-        background-image: linear-gradient(to bottom right, rgba($color-primary-400, .98), rgba($color-primary-700, .95)), url(../../img/photos-1.webp);
+        background-image: linear-gradient(to bottom right, rgba($color-primary-400, .98), rgba($color-primary-700, .98)), url(../../img/photos-1.webp);
         background-size: cover;
         background-position: center;
         clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
@@ -172,6 +172,7 @@
                 button {
                     width: 100%;
                     justify-content: center;
+                    border: 1px solid rgba($color-secondary-300, 1);
                     i {
                         color: $color-secondary-400;
                     }
@@ -296,6 +297,21 @@
         @extend .section-boilerplate;
         &--heading {
             @extend .section-heading-boilerplate;
+        }
+
+        form {
+            .form-group {
+                textarea {
+                    background-color: red;
+                }
+
+                label {
+
+                }
+                input {
+
+                }
+            }
         }
     }
 
